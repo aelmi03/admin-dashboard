@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #10a1e4e1;
+  --primary-text: black;
+  --secondary: white;
+  --secondary-text: white;
+  --card-border-color: rgb(250, 171, 24);
+  --neutral: rgb(155, 158, 172);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr;
+}
+
+.sidebar {
+  grid-row: 1/3;
+}
