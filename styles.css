@@ -7,12 +7,12 @@
 }
 
 :root {
-  --primary: #1992d4;
+  --primary: #008cff;
   --primary-text: black;
   --secondary: white;
   --secondary-text: white;
   --card-border-color: rgb(250, 171, 24);
-  --neutral: rgb(155, 158, 172);
+  --neutral: #e2e8f0;
 }
 
 html {
@@ -46,8 +46,10 @@ body {
   align-self: top;
 }
 .dashboard-item {
-  display: flex;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: max-content;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
   gap: 1rem;
   align-items: center;
   font-family: "Poppins", sans-serif;
@@ -59,9 +61,11 @@ body {
 .title {
   justify-self: start;
   color: white;
-  display: flex;
+  display: grid;
   gap: 0.2rem;
-  justify-content: center;
+  grid-template-columns: max-content;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
   align-items: center;
   font-family: sans-serif;
   cursor: pointer;
@@ -75,7 +79,134 @@ body {
 .dashboard-item > span {
   font-size: 2rem;
 }
-
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.2rem;
+  row-gap: 1.5rem;
+  padding: 1rem 0.5rem;
+}
+.search {
+  border: none;
+  border-radius: 15px;
+  font-size: 0.5rem;
+  height: 15px;
+  outline: none;
+  background-color: var(--neutral);
+}
+.account-info > .profile-image {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile-introduction > .profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.profile-name,
+.profile-username,
+.small-introduction-text {
+  font-family: "Poppins", sans-serif;
+}
+.small-introduction-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.profile-username {
+  font-weight: bold;
+}
+.profile-username {
+  font-size: 1rem;
+}
+section.header span {
+  font-size: 1.2rem;
+}
+.profile-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.dashboard-button {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--secondary-text);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.9rem;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+.search-section {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+}
+.account-info {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+}
+.account-info span {
+  cursor: pointer;
+}
+.buttons-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.main-content {
+  background-color: var(--neutral);
+}
+@media only screen and (min-width: 540px) {
+  section.header {
+    grid-template-columns: 3fr 1fr;
+    padding: 1rem 1.3rem;
+  }
+  .search-section {
+    gap: 0.5rem;
+  }
+  .profile-name {
+    font-size: 0.9rem;
+  }
+  .account-info > .profile-image {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  .dashboard-button {
+    padding: 0.5rem 1.3rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  .profile-introduction > .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .small-introduction-text {
+    font-size: 1rem;
+  }
+  .profile-username {
+    font-size: 1.3rem;
+  }
+  section.header span {
+    font-size: 1.8rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   .title > h1 {
     font-size: 2rem;
@@ -100,12 +231,52 @@ body {
   .dashboard-options {
     row-gap: 2.5rem;
   }
+
+  .search-section {
+    gap: 0.8rem;
+  }
+  .profile-name {
+    font-size: 1.2rem;
+  }
+  .account-info > .profile-image {
+    height: 40px;
+    width: 40px;
+  }
+  .dashboard-button {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    min-width: 90px;
+  }
+  .profile-introduction > .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .small-introduction-text {
+    font-size: 1.4rem;
+  }
+  .profile-username {
+    font-size: 1.7rem;
+  }
+  .buttons-container {
+    gap: 1.3rem;
+  }
+  section.header span {
+    font-size: 2.4rem;
+  }
+  .search {
+    padding: 1.5rem 1rem;
+    font-size: 1.4rem;
+  }
 }
+
 @media only screen and (min-width: 1024px) {
   .sidebar {
     padding: 1rem 2rem;
   }
-
+  .account-info {
+    gap: 4rem;
+  }
   .dashboard-item > span {
     font-size: 2.3rem;
   }
@@ -123,5 +294,58 @@ body {
   }
   .dashboard-options:nth-child(3) {
     margin-top: 3rem;
+  }
+  section.header {
+    padding: 2rem 3.5rem;
+    row-gap: 4rem;
+  }
+  .search-section {
+    gap: 2.5rem;
+  }
+  .profile-name {
+    font-size: 1.8rem;
+  }
+  .account-info > .profile-image {
+    height: 55px;
+    width: 55px;
+  }
+  .dashboard-button {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    min-width: 110px;
+  }
+  .profile-introduction > .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .small-introduction-text {
+    font-size: 1.4rem;
+  }
+  .profile-username {
+    font-size: 2rem;
+  }
+  .buttons-container {
+    gap: 1.3rem;
+  }
+  section.header span {
+    font-size: 3rem;
+  }
+  .search {
+    font-size: 1.7rem;
+    padding: 1.7rem 1.3rem;
+  }
+  .profile-introduction {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+  }
+  .profile-text-container {
+    display: grid;
+    gap: 1rem;
   }
 }
