@@ -7,7 +7,7 @@
 }
 
 :root {
-  --primary: #10a1e4e1;
+  --primary: #1992d4;
   --primary-text: black;
   --secondary: white;
   --secondary-text: white;
@@ -20,11 +20,13 @@ html {
 }
 body {
   width: 100%;
+
   min-height: 100vh;
 }
 
 .container {
   width: 100%;
+  min-height: inherit;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto 1fr;
@@ -32,4 +34,94 @@ body {
 
 .sidebar {
   grid-row: 1/3;
+  background-color: var(--primary);
+  display: grid;
+  gap: 3rem;
+  padding: 1rem 0.5rem;
+  align-content: start;
+}
+.dashboard-options {
+  display: grid;
+  row-gap: 1rem;
+  align-self: top;
+}
+.dashboard-item {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.title {
+  justify-self: start;
+  color: white;
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.title > .material-icons {
+  font-size: 2rem;
+}
+.title > h1 {
+  font-size: 1.2rem;
+}
+.dashboard-item > span {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .title > h1 {
+    font-size: 2rem;
+  }
+  .title > .material-icons {
+    font-size: 2.5rem;
+  }
+  .dashboard-item {
+    font-size: 1.5rem;
+    gap: 1.3rem;
+  }
+  .dashboard-item > span {
+    font-size: 2rem;
+  }
+  .title {
+    gap: 0.3rem;
+  }
+  .sidebar {
+    padding: 2rem 2rem;
+    gap: 5rem;
+  }
+  .dashboard-options {
+    row-gap: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sidebar {
+    padding: 1rem 2rem;
+  }
+
+  .dashboard-item > span {
+    font-size: 2.3rem;
+  }
+  .title > h1 {
+    font-size: 2.4rem;
+  }
+  .title > .material-icons {
+    font-size: 3.2rem;
+  }
+  .dashboard-item {
+    font-size: 1.9rem;
+  }
+  .title {
+    gap: 1.2rem;
+  }
+  .dashboard-options:nth-child(3) {
+    margin-top: 3rem;
+  }
 }

@@ -5,12 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Admin Dashboard</title>
   </head>
   <body>
     <div class="container">
-      <section class="sidebar"></section>
+      <section class="sidebar">
+        <div class="title">
+          <span class="material-icons"> dashboard </span>
+          <h1>Dashboard</h1>
+        </div>
+        <ul class="dashboard-options">
+          <li class="dashboard-item">
+            <span class="material-icons"> home </span>
+            <p>Home</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> account_circle </span>
+            <p>Profile</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> mode_comment </span>
+            <p>Messages</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> schedule </span>
+            <p>History</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> library_books </span>
+            <p>Tasks</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> groups </span>
+            <p>Communities</p>
+          </li>
+        </ul>
+        <ul class="dashboard-options">
+          <li class="dashboard-item">
+            <span class="material-icons"> settings </span>
+            <p>Settings</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> help_center </span>
+            <p>Support</p>
+          </li>
+          <li class="dashboard-item">
+            <span class="material-icons"> verified_user </span>
+            <p>Privacy</p>
+          </li>
+        </ul>
+      </section>
       <section class="header"></section>
       <section class="main-content"></section>
     </div>
