@@ -582,6 +582,7 @@ section.header span {
   }
   .main-content {
     grid-template-columns: 3fr 1fr;
+    padding: 6rem 3rem;
   }
   .projects-section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -591,14 +592,91 @@ section.header span {
   }
   .trending-section {
     padding: 2.7rem;
+    row-gap: 2.5rem;
   }
   .trending-image {
     height: 45px;
     width: 45px;
   }
+  .project-section-title,
+  .announcements-section-title,
+  .trending-section-title {
+    font-size: 1.9rem;
+    top: -31px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .main-content {
     grid-template-columns: 4fr 1fr;
+    padding: 7rem 4rem;
+    row-gap: 6rem;
+    column-gap: 2.3rem;
+  }
+  .projects-section {
+    grid-template-columns: repeat(auto-fit, minmax(360px));
+  }
+  .trending-username {
+    font-size: 1.9rem;
+  }
+  .trending-section {
+    padding: 3rem;
+  }
+  .trending-content {
+    font-size: 1.3rem;
+  }
+  .trending-image {
+    height: 55px;
+    width: 55px;
+  }
+  .project-section-title,
+  .announcements-section-title,
+  .trending-section-title {
+    font-size: 2.1rem;
+    top: -33px;
+  }
+  .announcement-title {
+    font-size: 1.7rem;
+  }
+  .announcement-content {
+    font-size: 1.5rem;
+  }
+  .project-icons span {
+    font-size: 2.45rem;
+  }
+  .announcements-section {
+    padding: 1.4rem;
+  }
+  .project-title {
+    font-size: 2rem;
+  }
+  .project-content {
+    font-size: 1.9rem;
+  }
+  .announcements-section {
+    padding: 3rem 2.5rem;
+  }
+  .project-icons > span {
+    font-size: 3.2rem;
+  }
+  .account-info > .profile-image {
+    height: 70px;
+    width: 70px;
+  }
+  .trending-image {
+    height: 58px;
+    width: 58px;
+  }
+  .dashboard-item {
+    font-size: 2.4rem;
+  }
+  .dashboard-item span {
+    font-size: 2.4rem;
+  }
+  .title h1,
+  .title span {
+    font-size: 3rem;
+  }
+  .dashboard-options {
+    row-gap: 3rem;
   }
 }
