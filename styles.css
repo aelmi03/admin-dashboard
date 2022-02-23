@@ -597,3 +597,8 @@ section.header span {
     width: 45px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  .main-content {
+    grid-template-columns: 4fr 1fr;
+  }
+}
