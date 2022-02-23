@@ -223,6 +223,7 @@ section.header span {
 }
 .project-icons > span {
   font-size: 1rem;
+  cursor: pointer;
 }
 .announcements-section,
 .trending-section {
@@ -319,6 +320,9 @@ section.header span {
   .main-content {
     row-gap: 3rem;
   }
+  .project-icons {
+    gap: 1.7rem;
+  }
   .project-title {
     font-size: 1.1rem;
   }
@@ -409,6 +413,68 @@ section.header span {
     padding: 1.5rem 1rem;
     font-size: 1.4rem;
   }
+  .main-content {
+    padding: 5rem 1rem;
+    row-gap: 5rem;
+    column-gap: 1rem;
+  }
+  .projects-section {
+    gap: 2rem;
+  }
+  .project-icons span {
+    font-size: 2.2rem;
+  }
+  .announcements-section {
+    padding: 1rem;
+  }
+  .project-title {
+    font-size: 1.655rem;
+  }
+  .project-content {
+    font-size: 1.5rem;
+  }
+  .project-card {
+    padding: 3rem 1.5rem;
+    border-left: 7px solid var(--card-border-color);
+    border-radius: 5px;
+  }
+  .project-icons {
+    margin-top: 3.5rem;
+  }
+  .projects-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .announcement-title {
+    font-size: 1.4rem;
+  }
+  .announcement-content {
+    font-size: 1.2rem;
+  }
+  .announcements-section {
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+  }
+  .trending-username {
+    font-size: 1.2rem;
+  }
+  .trending-content {
+    font-size: 1rem;
+  }
+  .trending-section {
+    padding: 2rem 1rem;
+    row-gap: 1.9rem;
+    border-radius: 5px;
+  }
+  .project-section-title,
+  .announcements-section-title,
+  .trending-section-title {
+    font-size: 1.6rem;
+    top: -23px;
+  }
+  .announcement:nth-child(3) {
+    border-top: 2px solid var(--neutral);
+    border-bottom: 2px solid var(--neutral);
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -450,6 +516,7 @@ section.header span {
     height: 55px;
     width: 55px;
   }
+
   .dashboard-button {
     padding: 1rem 2rem;
     font-size: 1.8rem;
@@ -488,5 +555,21 @@ section.header span {
   .profile-text-container {
     display: grid;
     gap: 1rem;
+  }
+  .main-content {
+    grid-template-columns: 3fr 1fr;
+  }
+  .projects-section {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .trending-username {
+    font-size: 1.5rem;
+  }
+  .trending-section {
+    padding: 2.7rem;
+  }
+  .trending-image {
+    height: 40px;
+    width: 40px;
   }
 }
