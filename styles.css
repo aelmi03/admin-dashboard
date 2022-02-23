@@ -11,6 +11,7 @@
   --primary-text: black;
   --secondary: white;
   --secondary-text: white;
+  --neutral-text: rgb(102, 102, 102);
   --card-border-color: rgb(250, 171, 24);
   --neutral: #e2e8f0;
 }
@@ -118,7 +119,7 @@ body {
   font-weight: bold;
 }
 .profile-username {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 section.header span {
   font-size: 1.2rem;
@@ -135,7 +136,7 @@ section.header span {
   border-radius: 20px;
   text-align: center;
   font-size: 0.7rem;
-  padding: 0.5rem 0.9rem;
+  padding: 0.5rem;
   font-family: "Poppins", sans-serif;
   display: grid;
   justify-items: center;
@@ -170,6 +171,57 @@ section.header span {
 }
 .main-content {
   background-color: var(--neutral);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 3rem 0.5rem;
+  gap: 0.2rem;
+}
+.projects-section {
+  position: relative;
+  display: grid;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  grid-row: 1/3;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+.project-section-title,
+.announcements-section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  position: absolute;
+  top: -15px;
+}
+.project-card {
+  padding: 0.5rem 0.8rem;
+  display: grid;
+  row-gap: 0.2rem;
+  background-color: var(--secondary);
+  border-left: 2px solid var(--card-border-color);
+  border-radius: 2px;
+}
+.project-title {
+  font-size: 0.7rem;
+  font-family: "Poppins", sans-serif;
+}
+.project-content {
+  font-size: 0.7rem;
+  color: var(--neutral-text);
+}
+.project-icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 0.5rem;
+  justify-self: end;
+}
+.project-icons > span {
+  font-size: 1rem;
+}
+.announcements-section {
+  display: grid;
+  position: relative;
+  background-color: var(--secondary);
 }
 @media only screen and (min-width: 540px) {
   section.header {
@@ -243,9 +295,9 @@ section.header span {
     width: 40px;
   }
   .dashboard-button {
-    padding: 1rem 1rem;
+    padding: 1rem;
     font-size: 1.5rem;
-    min-width: 90px;
+    min-width: 80px;
   }
   .profile-introduction > .profile-image {
     width: 60px;
