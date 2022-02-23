@@ -7,12 +7,12 @@
 }
 
 :root {
-  --primary: #008cff;
+  --primary: #d4045b;
   --primary-text: black;
   --secondary: white;
   --secondary-text: white;
   --neutral-text: rgb(102, 102, 102);
-  --card-border-color: rgb(250, 171, 24);
+  --card-border-color: rgb(24, 250, 175);
   --neutral: #e2e8f0;
 }
 
@@ -57,7 +57,11 @@ body {
   color: white;
   font-weight: 600;
   font-size: 0.7rem;
+  transition: color 0.35s ease-in-out;
   cursor: pointer;
+}
+.dashboard-item:hover {
+  color: var(--card-border-color);
 }
 .title {
   justify-self: start;
@@ -86,6 +90,10 @@ body {
   padding: 0.2rem;
   row-gap: 1.5rem;
   padding: 1rem 0.5rem;
+  position: sticky;
+  top: 0px;
+  background-color: var(--secondary);
+  z-index: 2;
 }
 .search {
   border: none;
@@ -143,6 +151,10 @@ section.header span {
   justify-items: center;
   align-items: center;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.dashboard-button:hover {
+  transform: scale(1.15);
 }
 .search-section {
   display: grid;
@@ -204,6 +216,10 @@ section.header span {
   border-left: 2px solid var(--card-border-color);
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.25s ease-in-out;
+}
+.project-card:hover {
+  transform: scale(1.035);
 }
 .project-title {
   font-size: 0.7rem;
@@ -224,6 +240,11 @@ section.header span {
 .project-icons > span {
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.project-icons > span:hover {
+  transform: scale(1.45);
+  color: var(--card-border-color);
 }
 .announcements-section,
 .trending-section {
@@ -249,7 +270,7 @@ section.header span {
 .announcement {
   display: grid;
   row-gap: 0.4rem;
-  padding: 1rem 0rem;
+  padding: 1rem 0.5rem;
 }
 .announcement:nth-child(3) {
   border-top: 1px solid var(--neutral);
@@ -390,7 +411,7 @@ section.header span {
   .dashboard-button {
     padding: 1rem;
     font-size: 1.5rem;
-    min-width: 80px;
+    min-width: 100px;
   }
   .profile-introduction > .profile-image {
     width: 60px;
@@ -474,6 +495,9 @@ section.header span {
   .announcement:nth-child(3) {
     border-top: 2px solid var(--neutral);
     border-bottom: 2px solid var(--neutral);
+  }
+  .trending {
+    gap: 1.5rem;
   }
 }
 
@@ -569,7 +593,7 @@ section.header span {
     padding: 2.7rem;
   }
   .trending-image {
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
   }
 }
