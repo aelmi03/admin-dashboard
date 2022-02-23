@@ -254,7 +254,27 @@ section.header span {
   border-top: 1px solid var(--neutral);
   border-bottom: 1px solid var(--neutral);
 }
-
+.trending-section {
+  padding: 0.5rem;
+  row-gap: 1rem;
+}
+.trending {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  gap: 0.5rem;
+}
+.trending-username {
+  font-size: 0.7rem;
+  color: var(--primary-text);
+  font-family: sans-serif;
+}
+.trending-content {
+  font-size: 0.55rem;
+  color: var(--neutral-text);
+  font-family: sans-serif;
+}
 @media only screen and (min-width: 540px) {
   section.header {
     grid-template-columns: 3fr 1fr;
@@ -289,6 +309,43 @@ section.header span {
   }
   section.header span {
     font-size: 1.8rem;
+  }
+  .project-section-title,
+  .announcements-section-title,
+  .trending-section-title {
+    font-size: 1.2rem;
+    top: -20px;
+  }
+  .main-content {
+    row-gap: 3rem;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-content {
+    font-size: 1rem;
+  }
+  .project-card {
+    padding: 1rem 0.5rem;
+  }
+  .projects-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .announcement-title {
+    font-size: 0.95rem;
+  }
+  .announcement-content {
+    font-size: 0.8rem;
+  }
+  .trending-username {
+    font-size: 0.9rem;
+  }
+  .trending-content {
+    font-size: 0.8rem;
+  }
+  .trending-section {
+    padding: 1.5rem 0.6rem;
+    row-gap: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
